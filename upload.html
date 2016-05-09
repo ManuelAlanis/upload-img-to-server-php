@@ -8,8 +8,26 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>          
+
+  
+
+  <script>
+
+  function post() 
+  {
+    alert("post");
+    $.postMessage(
+    'hello world',
+    'http://192.168.1.76:3000/administradortaxi/nuevochofer',
+     parent
+    );
+  }
+
+  </script>
 
   <title>Subir fotitos</title>
 
@@ -25,7 +43,7 @@
 
     <input type="file" name="fileToUpload" id="fileToUpload">
     
-    <input type="submit" value="Subir foto" name="submit" class="btn orange">
+    <input type="submit" onclick="post();" value="Subir foto" name="submit" class="btn orange">
 
 
 	   <i class="material-icons left">

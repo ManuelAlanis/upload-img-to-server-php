@@ -1,4 +1,5 @@
 <?php
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -25,8 +26,15 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
+    if($imageFileType != "jpg" 
+    && $imageFileType != "JPG" 
+    && $imageFileType != "png" 
+    && $imageFileType != "PNG" 
+    && $imageFileType != "jpeg"
+    && $imageFileType != "JPEG"
+    && $imageFileType != "gif"
+    && $imageFileType != "GIF"
+    ) {
     echo "Disculpa, solo JPG, JPEG, PNG & GIF son permitidos.";
     $uploadOk = 0;
 }

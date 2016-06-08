@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js">
+    </script>
+    <script src="fotos.js"></script>
+    <style>
+
+    .done-true
+    {
+      text-decoration: line-through;
+      color: grey;
+    }
+
+    </style>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+    <div ng-controller="fotos">
+      <div ng-repeat="foto in artis">
+        <h3>{{foto}}</h3>
+      </div>
+    </div>
+  </body>
+</html>

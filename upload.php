@@ -21,7 +21,7 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 50000000) {
+if ($_FILES["fileToUpload"]["size"] > 500000) {
     echo "Disculpa, tu foto es demasiado larga.";
     $uploadOk = 0;
 }
@@ -70,4 +70,4 @@ if ($uploadOk == 0) {
         echo "Disculpa, hubo un error subiendo tu imagen.";
     }
 }
-?>
+?>?>
